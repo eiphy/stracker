@@ -22,7 +22,7 @@ for run in tqdm(list(repo.iter_runs())):
         infos = list(run.iter_metrics_info())
         vs = [run.get_metric(info[0], context=info[1]) for info in infos]
         allnone = all(v is None for v in vs)
-        # print(allnone)
+        print(allnone)
         # for m in metrics:
         #     v = run.get_metric(m, context=context)
         #     print(v is None)
